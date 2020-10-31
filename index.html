@@ -7,6 +7,9 @@
         <div id="maincontent">
 
         </div>
+        <div id="form-message">
+
+        </div>
             <div class="p-2 p-md-0 bg-light bg-md-white max-width">
               <div class="contact-form-content">
                 <div class="row">
@@ -51,9 +54,10 @@ document.getElementById("btn-submit-mmform").onclick = function() {
                     cache:'default'}).then(
     function(response){
         response.text().then(function(data){
-            let main = document.getElementById("maincontent");
+            let main = document.getElementById("form-message");
             let responsebody = document.createElement("div");
             responsebody.appendChild(document.createTextNode(data));
+            main.innerHTML = "";
             main.appendChild(responsebody);
         })
     }
