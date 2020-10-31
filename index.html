@@ -17,7 +17,7 @@
                     <input id="inputname" name="name" type="text" class="form-control" placeholder="Nom *">
                   </div>
                   <div class="col-12 mt-1">
-                    <input id="inputemail" name="email" type="text" class="form-control" placeholder="E-mail *">
+                    <input id="inputemail" name="email" type="email" class="form-control" placeholder="E-mail *">
                   </div>
                 </div>
                 <textarea id="inputmessage" name="message" class="form-control mt-1" rows="8" placeholder="Message *"></textarea>
@@ -73,13 +73,18 @@ document.getElementById("btn-submit-mmform").onclick = function() {
       {
         formverification.appendChild(document.createTextNode("please specify name. "));
       }
+      if(!msg)
+      {
+        formverification.appendChild(document.createTextNode("please specify message. "));
+      }
       if(!email)
       {
         formverification.appendChild(document.createTextNode("please specify email. "));
       }
-      if(!msg)
+      else
       {
-        formverification.appendChild(document.createTextNode("please specify message. "));
+        const re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        if(!re.test(String(email).toLowerCase())) formverification.appendChild(document.createTextNode("not valid email. "));
       }
       main.appendChild(formverification);
     }
