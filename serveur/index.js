@@ -28,7 +28,7 @@ let transport = nodemailer.createTransport({
 });
 
 //serves public repo, but should not be done in prod, only in dev
-app.use(express.static('public'));
+app.use(express.static('docs'));
 ///////////////////////////ROUTES
 
 //manages form post by fetch
