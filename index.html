@@ -7,12 +7,36 @@
         <div id="maincontent">
 
         </div>
+            <div class="p-2 p-md-0 bg-light bg-md-white max-width">
+              <div class="contact-form-content">
+                <div class="row">
+                  <div class="col-12 mt-1">
+                    <input name="name" type="text" class="form-control" placeholder="Nom *">
+                  </div>
+                  <div class="col-12 mt-1">
+                    <input name="email" type="text" class="form-control" placeholder="E-mail *">
+                  </div>
+                </div>
+                <textarea name="message" class="form-control mt-1" rows="8" placeholder="Message *"></textarea>
+                
+                <div class="text-right">
+                  <button class="btn btn-primary submit g-recaptcha" id="btn-submit-mmform">
+                    <span class="txt">Envoyer</span>
+                    <i class="fas fa-spinner spinner" style="display:none"></i>
+                  </button>
+                </div>
+                  <div class="small text-primary">
+                      * champs requis
+                  </div>
+              </div>
+            </div>
     </body>
 </html>
 
 <script>
 var url = "/medimoovform"
-fetch(url, {method:'POST', headers:{}, mode:"cors", cache:'default'}).then(
+document.getElementById("btn-submit-mmform").onclick = function() {
+    fetch(url, {method:'POST', headers:{}, mode:"cors", cache:'default'}).then(
     function(response){
         response.text().then(function(data){
             let main = document.getElementById("maincontent");
@@ -21,5 +45,5 @@ fetch(url, {method:'POST', headers:{}, mode:"cors", cache:'default'}).then(
             main.appendChild(responsebody);
         })
     }
-)
+)}
 </script>
