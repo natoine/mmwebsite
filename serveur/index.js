@@ -48,21 +48,32 @@ app.get('/', function (req, res) {
 
 app.post('/medimoovform', cors(), function(req, res) {
   let body = req.body ;
-  const message = {
-    from: body.email, // Sender address
-    to: 'antoineseilles@gmail.com',         // List of recipients
-    subject: 'formulaire de contact de MediMoov', // Subject line
-    text: `de la part de ${body.name} : ${body.msg}`  // Plain text body
-  };
-  transport.sendMail(message, function(err, info) {
-    if (err) {
-      console.log("err sending email", err)
-      res.send("had a pb :(");
-    } else {
-      console.log("info sending email", info);
-      res.send("email sended !");
-    }
-  });
+  if(body.name && body.msg && body.email)
+  {
+    const message = {
+      from: body.email, // Sender address
+      to: 'antoineseilles@gmail.com',         // List of recipients
+      subject: 'formulaire de contact de MediMoov', // Subject line
+      text: `de la part de ${body.name} : ${body.msg}`  // Plain text body
+    };
+    transport.sendMail(message, function(err, info) {
+      if (err) {
+        console.log("err sending email", err);
+        res.status(500);
+        res.send("had a pb :(");
+      } else {
+        console.log("info sending email", info);
+        res.status(200);
+        res.send("email sended !");
+      }
+    });
+  }
+  else 
+  {
+    console.log("post mmform", "someone try to post without the right data");
+    res.status(400);
+    res.send("something is missing");
+  }
 }) 
 
 app.listen(port, function () {
