@@ -4,9 +4,22 @@
     </head>
     <body>
         <h1>MediMoov !!!!</h1>
+        <div id="maincontent">
+
+        </div>
     </body>
 </html>
 
 <script>
-
+var url = "/medimoovform"
+fetch(url, {method:'POST', headers:{}, mode:"cors", cache:'default'}).then(
+    function(response){
+        response.text().then(function(data){
+            let main = document.getElementById("maincontent");
+            let responsebody = document.createElement("div");
+            responsebody.appendChild(document.createTextNode(data));
+            main.appendChild(responsebody);
+        })
+    }
+)
 </script>

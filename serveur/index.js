@@ -4,6 +4,8 @@ var express = require('express');
 var app = express();
 const port = process.env.PORT || 3000 ;
 
+const fs = require('fs')
+
 const nodemailer = require('nodemailer');
 const { EMAIL, PWDOVH, HOST, PORTSMTP } = require("./config.js");
 console.log("config", EMAIL + " " + PWDOVH + " " + HOST + " " + PORTSMTP);
@@ -23,13 +25,6 @@ let transport = nodemailer.createTransport({
   }
 });
 
-const message = {
-  from: "test@gmail.com", // Sender address
-  to: 'antoineseilles@gmail.com',         // List of recipients
-  subject: 'Test d\'envoi d\'un mail', // Subject line
-  text: 'yo ça a l\'air de marcher ?' // Plain text body
-};
-
 // verify connection configuration
 /*transport.verify(function(error, success) {
   if (error) {
@@ -39,18 +34,32 @@ const message = {
   }
 });
 */
-transport.sendMail(message, function(err, info) {
-  if (err) {
-    console.log("err sending email", err)
-  } else {
-    console.log("info sending email", info);
-  }
-});
 
 app.get('/', function (req, res) {
-    res.send("bienvenue sur MM serveur");
+  fs.readFile("./index.html", function(err, data) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write(data);
+  res.end();
+})
   })
 
+app.post('/medimoovform', function(req, res) {
+  const message = {
+    from: "test@gmail.com", // Sender address
+    to: 'antoineseilles@gmail.com',         // List of recipients
+    subject: 'Test d\'envoi d\'un mail', // Subject line
+    text: 'yo ça a l\'air de marcher ?' // Plain text body
+  };
+  transport.sendMail(message, function(err, info) {
+    if (err) {
+      console.log("err sending email", err)
+      res.send("had a pb :(");
+    } else {
+      console.log("info sending email", info);
+      res.send("email sended !");
+    }
+  });
+}) 
 
 app.listen(port, function () {
     console.log('MediMoov website serveur listening on port ' + port);
