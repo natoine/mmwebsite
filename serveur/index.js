@@ -11,8 +11,7 @@ app.use(bodyParser.json())
 
 const nodemailer = require('nodemailer');
 const { EMAIL, PWDOVH, HOST, PORTSMTP } = require("./config.js");
-//console.log("config", EMAIL + " " + PWDOVH + " " + HOST + " " + PORTSMTP);
-
+console.log("config", EMAIL + " " + PWDOVH + " " + HOST + " " + PORTSMTP);
 
 let transport = nodemailer.createTransport({
   host: HOST,
@@ -28,24 +27,11 @@ let transport = nodemailer.createTransport({
   }
 });
 
-// verify connection configuration
-/*transport.verify(function(error, success) {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Server is ready to take our messages");
-  }
-});
-*/
+//serves public repo, but should not be done in prod, only in dev
+app.use(express.static('public'));
+///////////////////////////ROUTES
 
-app.get('/', function (req, res) {
-  fs.readFile("./index.html", function(err, data) {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.write(data);
-  res.end();
-})
-  })
-
+//manages form post by fetch
 app.post('/medimoovform', cors(), function(req, res) {
   let body = req.body ;
   if(body.name && body.msg && body.email)

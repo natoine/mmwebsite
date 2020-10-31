@@ -1,42 +1,3 @@
-<html>
-    <head>
-
-    </head>
-    <body>
-        <h1>MediMoov !!!!</h1>
-        <div id="maincontent">
-
-        </div>
-        <div id="form-message">
-
-        </div>
-            <div class="p-2 p-md-0 bg-light bg-md-white max-width">
-              <div class="contact-form-content">
-                <div class="row">
-                  <div class="col-12 mt-1">
-                    <input id="inputname" name="name" type="text" class="form-control" placeholder="Nom *">
-                  </div>
-                  <div class="col-12 mt-1">
-                    <input id="inputemail" name="email" type="email" class="form-control" placeholder="E-mail *">
-                  </div>
-                </div>
-                <textarea id="inputmessage" name="message" class="form-control mt-1" rows="8" placeholder="Message *"></textarea>
-                
-                <div class="text-right">
-                  <button class="btn btn-primary submit g-recaptcha" id="btn-submit-mmform">
-                    <span class="txt">Envoyer</span>
-                    <i class="fas fa-spinner spinner" style="display:none"></i>
-                  </button>
-                </div>
-                  <div class="small text-primary">
-                      * champs requis
-                  </div>
-              </div>
-            </div>
-    </body>
-</html>
-
-<script>
 var url = "/medimoovform"
 document.getElementById("btn-submit-mmform").onclick = function() {
     let name = document.getElementById("inputname").value ;
@@ -89,4 +50,3 @@ document.getElementById("btn-submit-mmform").onclick = function() {
       main.appendChild(formverification);
     }
    }
-</script>
