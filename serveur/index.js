@@ -6,6 +6,8 @@ var cors = require('cors')
 const port = process.env.PORT || 3000 ;
 
 const fs = require('fs')
+const bodyParser   = require('body-parser')
+app.use(bodyParser.json())
 
 const nodemailer = require('nodemailer');
 const { EMAIL, PWDOVH, HOST, PORTSMTP } = require("./config.js");
@@ -45,11 +47,12 @@ app.get('/', function (req, res) {
   })
 
 app.post('/medimoovform', cors(), function(req, res) {
+  let body = req.body ;
   const message = {
-    from: "test@gmail.com", // Sender address
+    from: body.email, // Sender address
     to: 'antoineseilles@gmail.com',         // List of recipients
-    subject: 'Test d\'envoi d\'un mail', // Subject line
-    text: 'yo ça a l\'air de marcher ?' // Plain text body
+    subject: 'formulaire de contact de MediMoov', // Subject line
+    text: `de la part de ${body.name} : ${body.msg}`  // Plain text body
   };
   transport.sendMail(message, function(err, info) {
     if (err) {

@@ -11,13 +11,13 @@
               <div class="contact-form-content">
                 <div class="row">
                   <div class="col-12 mt-1">
-                    <input name="name" type="text" class="form-control" placeholder="Nom *">
+                    <input id="inputname" name="name" type="text" class="form-control" placeholder="Nom *">
                   </div>
                   <div class="col-12 mt-1">
-                    <input name="email" type="text" class="form-control" placeholder="E-mail *">
+                    <input id="inputemail" name="email" type="text" class="form-control" placeholder="E-mail *">
                   </div>
                 </div>
-                <textarea name="message" class="form-control mt-1" rows="8" placeholder="Message *"></textarea>
+                <textarea id="inputmessage" name="message" class="form-control mt-1" rows="8" placeholder="Message *"></textarea>
                 
                 <div class="text-right">
                   <button class="btn btn-primary submit g-recaptcha" id="btn-submit-mmform">
@@ -36,7 +36,19 @@
 <script>
 var url = "/medimoovform"
 document.getElementById("btn-submit-mmform").onclick = function() {
-    fetch(url, {method:'POST', headers:{}, mode:"cors", cache:'default'}).then(
+    let name = document.getElementById("inputname").value ;
+    let email = document.getElementById("inputemail").value ;
+    let msg = document.getElementById("inputmessage").value ;
+    console.log(`name: ${name} email: ${email} msg:${msg}`);
+    fetch(url, {    method:'POST', 
+                    body: JSON.stringify({
+                        email: email,
+                        name: name,
+                        msg: msg
+                    }),
+                    headers:{'Content-Type': 'application/json'}, 
+                    mode:"cors", 
+                    cache:'default'}).then(
     function(response){
         response.text().then(function(data){
             let main = document.getElementById("maincontent");
