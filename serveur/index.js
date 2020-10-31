@@ -3,6 +3,12 @@
 var express = require('express');
 var app = express();
 var cors = require('cors')
+
+var corsOptions = {
+  origin: 'https://mmserveur.herokuapp.com',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+
 const port = process.env.PORT || 3000 ;
 
 const fs = require('fs')
@@ -32,7 +38,7 @@ app.use(express.static('docs'));
 ///////////////////////////ROUTES
 
 //manages form post by fetch
-app.post('/medimoovform', cors(), function(req, res) {
+app.post('/medimoovform', cors(corsOptions), function(req, res) {
   let body = req.body ;
   if(body.name && body.msg && body.email)
   {
