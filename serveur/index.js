@@ -2,6 +2,7 @@
 
 var express = require('express');
 var app = express();
+var cors = require('cors')
 const port = process.env.PORT || 3000 ;
 
 const fs = require('fs')
@@ -43,7 +44,7 @@ app.get('/', function (req, res) {
 })
   })
 
-app.post('/medimoovform', function(req, res) {
+app.post('/medimoovform', cors(), function(req, res) {
   const message = {
     from: "test@gmail.com", // Sender address
     to: 'antoineseilles@gmail.com',         // List of recipients
