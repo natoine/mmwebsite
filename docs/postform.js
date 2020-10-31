@@ -1,4 +1,14 @@
-var url = "/medimoovform"
+var domain = document.location.href;
+console.log("domain", domain);
+
+var postroute = "/medimoovform" ;
+
+var url ;
+if(domain == "http://localhost:3000/") url = postroute ;
+else url = "https://mmserveur.herokuapp.com".concat(postroute)
+
+console.log("url", url);
+
 document.getElementById("btn-submit-mmform").onclick = function() {
     let name = document.getElementById("inputname").value ;
     let email = document.getElementById("inputemail").value ;
