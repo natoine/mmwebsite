@@ -33,6 +33,8 @@ let transport = nodemailer.createTransport({
   }
 });
 
+//enable pre flight CORS request
+app.options('*', cors())
 //serves public repo, but should not be done in prod, only in dev
 app.use(express.static('docs'));
 ///////////////////////////ROUTES
