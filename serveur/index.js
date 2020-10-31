@@ -50,23 +50,34 @@ app.post('/medimoovform', cors(), function(req, res) {
   let body = req.body ;
   if(body.name && body.msg && body.email)
   {
-    const message = {
-      from: body.email, // Sender address
-      to: 'antoineseilles@gmail.com',         // List of recipients
-      subject: 'formulaire de contact de MediMoov', // Subject line
-      text: `de la part de ${body.name} : ${body.msg}`  // Plain text body
-    };
-    transport.sendMail(message, function(err, info) {
-      if (err) {
-        console.log("err sending email", err);
-        res.status(500);
-        res.send("had a pb :(");
-      } else {
-        console.log("info sending email", info);
-        res.status(200);
-        res.send("email sended !");
-      }
-    });
+    //test email
+    const re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    if(re.test(String(body.email).toLowerCase()))
+    {
+      const message = {
+        from: body.email, // Sender address
+        to: 'antoineseilles@gmail.com',         // List of recipients
+        subject: 'formulaire de contact de MediMoov', // Subject line
+        text: `de la part de ${body.name} : ${body.msg}`  // Plain text body
+      };
+      transport.sendMail(message, function(err, info) {
+        if (err) {
+          console.log("err sending email", err);
+          res.status(500);
+          res.send("had a pb :(");
+        } else {
+          console.log("info sending email", info);
+          res.status(200);
+          res.send("email sended !");
+        }
+      });
+    }
+    else 
+    {
+      console.log("post mmform", "someone try to post without valid email");
+      res.status(400);
+      res.send("not valid email");
+    }
   }
   else 
   {
