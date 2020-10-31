@@ -5,7 +5,7 @@ var app = express();
 var cors = require('cors')
 
 var corsOptions = {
-  origin: 'https://mmserveur.herokuapp.com',
+  origin: 'https://natoine.github.io',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
