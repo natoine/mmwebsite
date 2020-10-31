@@ -11,7 +11,7 @@ app.use(bodyParser.json())
 
 const nodemailer = require('nodemailer');
 const { EMAIL, PWDOVH, HOST, PORTSMTP } = require("./config.js");
-console.log("config", EMAIL + " " + PWDOVH + " " + HOST + " " + PORTSMTP);
+//console.log("config", EMAIL + " " + PWDOVH + " " + HOST + " " + PORTSMTP);
 
 
 let transport = nodemailer.createTransport({

@@ -43,23 +43,45 @@ document.getElementById("btn-submit-mmform").onclick = function() {
     let email = document.getElementById("inputemail").value ;
     let msg = document.getElementById("inputmessage").value ;
     console.log(`name: ${name} email: ${email} msg:${msg}`);
-    fetch(url, {    method:'POST', 
-                    body: JSON.stringify({
-                        email: email,
-                        name: name,
-                        msg: msg
-                    }),
-                    headers:{'Content-Type': 'application/json'}, 
-                    mode:"cors", 
-                    cache:'default'}).then(
-    function(response){
-        response.text().then(function(data){
-            let main = document.getElementById("form-message");
-            let responsebody = document.createElement("div");
-            responsebody.appendChild(document.createTextNode(data));
-            main.innerHTML = "";
-            main.appendChild(responsebody);
-        })
+    let main = document.getElementById("form-message");
+    if(name && email && msg)
+    {
+      fetch(url, {    method:'POST', 
+                      body: JSON.stringify({
+                          email: email,
+                          name: name,
+                          msg: msg
+                      }),
+                      headers:{'Content-Type': 'application/json'}, 
+                      mode:"cors", 
+                      cache:'default'}).then(
+        function(response){
+            response.text().then(function(data){
+                let responsebody = document.createElement("div");
+                responsebody.appendChild(document.createTextNode(data));
+                main.innerHTML = "";
+                main.appendChild(responsebody);
+            })
+        }
+      )  
     }
-)}
+    else 
+    {
+      main.innerHTML = "";
+      let formverification = document.createElement("div");
+      if(!name) 
+      {
+        formverification.appendChild(document.createTextNode("please specify name. "));
+      }
+      if(!email)
+      {
+        formverification.appendChild(document.createTextNode("please specify email. "));
+      }
+      if(!msg)
+      {
+        formverification.appendChild(document.createTextNode("please specify message. "));
+      }
+      main.appendChild(formverification);
+    }
+   }
 </script>
