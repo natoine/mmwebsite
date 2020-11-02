@@ -17,6 +17,7 @@ document.getElementById("btn-submit-mmform").onclick = function() {
     let main = document.getElementById("form-message");
     if(name && email && msg)
     {
+      document.getElementById("btn-submit-mmform").disabled = true;
       fetch(url, {    method:'POST', 
                       body: JSON.stringify({
                           email: email,
@@ -32,6 +33,7 @@ document.getElementById("btn-submit-mmform").onclick = function() {
                 responsebody.appendChild(document.createTextNode(data));
                 main.innerHTML = "";
                 main.appendChild(responsebody);
+                document.getElementById("btn-submit-mmform").disabled = false;
             })
         }
       )  
