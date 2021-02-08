@@ -1,69 +1,283 @@
-<html>
-    <head>
+<!doctype html>
+<html lang="fr">
 
-    </head>
-    <body>
-      <!--navbar-->
-        <header class=navbar>
-          <div class=container>
-            <a class=navbar-brand href="/#top">
-              <img class=logo src="logo-medimoov.png" alt="logo MediMoov">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MediMoov : des jeux vidéo thérapeutiques pour l'activité physique." />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MediMoov" />
+    <meta property="og:url" content="https://www.medimoov.fr/" />
+    <meta property="og:site_name" content="MediMoov" />
+    <!--<meta property="og:image" content="http://www.naturalpad.fr/wp-content/uploads/2015/07/autreblog.jpg" />-->
+    <meta property="og:image:width" content="280" />
+    <meta property="og:image:height" content="280" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Naturalpad - Accueil" />
+    <meta name="twitter:description" content="MediMoov : des jeux vidéo thérapeutiques pour l'activité physique." />
+    <meta name="twitter:site" content="@Naturalpad" />
+    <meta name="twitter:image" content="http://www.naturalpad.fr/wp-content/uploads/2015/07/autreblog.jpg" />
+    <meta name="twitter:creator" content="@Naturalpad" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://www.naturalpad.fr/assets/css/app.min.css?v=1597313722">
+    <link rel="stylesheet" href="https://www.naturalpad.fr/assets/css/custom.css" />
+    <link rel="icon" type="image/png" href="https://www.naturalpad.fr/assets/images/faviconMM.png" />
+</head>
+
+<body>
+    <header class="navbar navbar-expand-md navbar-light h6 mb-0" id="top">
+        <div class="container">
+
+            <a class="navbar-brand" href="https://www.medimoov.fr/#top"><svg version="1.1" id="logoNP"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 1300 360" xml:space="preserve" alt="NaturalPad" width="3900" height="1080"
+                    style="width:180px;height:auto;">
+                    <g class="layer">
+                        <title>Layer 1</title>
+                        <g id="logo_final">
+                            <path id="svg_28"
+                                d="m267.70833,117.40568l0,0c-7.54626,0 -13.6661,-6.11984 -13.6661,-13.6661l0,0c0,-7.54626 6.11984,-13.6661 13.6661,-13.6661l0,0c7.54626,0 13.6661,6.11984 13.6661,13.6661l0,0c0,7.54626 -6.11984,13.6661 -13.6661,13.6661z"
+                                class="st4" />
+                            <path id="svg_29"
+                                d="m283.76715,74.29074l0,0c-5.19956,0 -9.43283,-4.23328 -9.43283,-9.43283l0,0c0,-5.19956 4.23328,-9.43283 9.43283,-9.43283l0,0c5.19956,0 9.43283,4.23328 9.43283,9.43283l0,0c0,5.24557 -4.23328,9.43283 -9.43283,9.43283z"
+                                class="st4" />
+                            <path id="svg_30"
+                                d="m185.20558,90.39558l0,0c-7.54626,0 -13.6661,-6.11984 -13.6661,-13.6661l0,0c0,-7.54626 6.11984,-13.6661 13.6661,-13.6661l0,0c7.54626,0 13.6661,6.11984 13.6661,13.6661l0,0c0,7.54626 -6.11984,13.6661 -13.6661,13.6661z"
+                                class="st4" />
+                            <path id="svg_31"
+                                d="m101.87457,113.72458l0,0c-7.54626,0 -13.6661,-6.11984 -13.6661,-13.6661l0,0c0,-7.54626 6.11984,-13.6661 13.6661,-13.6661l0,0c7.54626,0 13.6661,6.11984 13.6661,13.6661l0,0c0,7.54626 -6.11984,13.6661 -13.6661,13.6661z"
+                                class="st4" />
+                            <path id="svg_32"
+                                d="m46.24388,177.26965l0,0c-7.54626,0 -13.6661,-6.11984 -13.6661,-13.6661l0,0c0,-7.54626 6.11984,-13.6661 13.6661,-13.6661l0,0c7.54626,0 13.6661,6.11984 13.6661,13.6661l0,0c0,7.54626 -6.11984,13.6661 -13.6661,13.6661z"
+                                class="st4" />
+                            <path id="svg_33"
+                                d="m58.6676,325.94026l0,0c-7.54626,0 -13.6661,-6.11984 -13.6661,-13.6661l0,0c0,-7.54626 6.11984,-13.6661 13.6661,-13.6661l0,0c7.54626,0 13.6661,6.11984 13.6661,13.6661l0,0c0,7.54626 -6.11984,13.6661 -13.6661,13.6661z"
+                                class="st4" />
+                            <path id="svg_34"
+                                d="m180.00602,44.47381l0,0c-5.19956,0 -9.43283,-4.23328 -9.43283,-9.43283l0,0c0,-5.19956 4.23328,-9.43283 9.43283,-9.43283l0,0c5.19956,0 9.43283,4.23328 9.43283,9.43283l0,0c0,5.19956 -4.18726,9.43283 -9.43283,9.43283z"
+                                class="st4" />
+                            <path id="svg_35"
+                                d="m77.80934,74.84291l0,0c-5.19956,0 -9.43283,-4.23328 -9.43283,-9.43283l0,0c0,-5.19956 4.23328,-9.43283 9.43283,-9.43283l0,0c5.19956,0 9.43283,4.23328 9.43283,9.43283l0,0c0,5.19956 -4.23328,9.43283 -9.43283,9.43283z"
+                                class="st4" />
+                            <path id="svg_36"
+                                d="m9.43283,152.88234l0,0c-5.19956,0 -9.43283,-4.23328 -9.43283,-9.43283l0,0c0,-5.19956 4.23328,-9.43283 9.43283,-9.43283l0,0c5.19956,0 9.43283,4.23328 9.43283,9.43283l0,0c0,5.19956 -4.18726,9.43283 -9.43283,9.43283z"
+                                class="st4" />
+                            <path id="svg_37"
+                                d="m266.37393,172.30016l0,0c0,-3.03691 0.59818,-5.9818 1.6565,-8.6506c0,0 0,0 0,0c1.0123,-2.62279 1.56447,-5.42964 1.56447,-8.42052l0,0c0,-12.74582 -10.35311,-23.09893 -23.09893,-23.09893l0,0c-5.9818,0 -11.45744,2.30069 -15.55267,6.02781c0,0 -0.04602,0 -0.04602,0.04602c-1.6565,1.51845 -3.91117,2.43874 -6.30389,2.43874c-5.10753,0 -9.24877,-4.04921 -9.43283,-9.15675c0,0 -0.04602,-0.04602 -0.04602,-0.04602c-0.36811,-12.42373 -10.53716,-22.40873 -23.09893,-22.40873l0,0c-11.50346,0 -21.02831,8.42052 -22.82285,19.41783c0,0 0,0.04602 0,0.04602c-0.78223,4.41732 -4.64739,7.82235 -9.29479,7.82235l0,0c-3.17495,0 -5.93578,-1.56447 -7.68431,-3.95719c0,0 0,0 0,0c-4.18726,-5.79774 -11.04331,-9.61689 -18.72762,-9.61689l0,0c-12.74582,0 -23.09893,10.35311 -23.09893,23.09893l0,0c0,3.26699 0.69021,6.39592 1.93258,9.20276c0,0 0,0 0,0c0.50615,1.15034 0.82825,2.48475 0.82825,3.81915l0,0c0,5.19956 -4.23328,9.43283 -9.43283,9.43283l0,0c-0.82825,0 -1.6565,-0.13804 -2.43874,-0.3221c0,0 -0.04602,0 -0.04602,0c-1.93258,-0.55216 -4.0032,-0.82825 -6.11984,-0.82825l0,0c-12.74582,0 -23.09893,10.35311 -23.09893,23.09893l0,0c0,6.85606 2.9909,12.9759 7.68431,17.20916c0.09202,0.09202 0.23007,0.23007 0.3221,0.3221c4.41732,4.18726 7.17816,10.12304 7.17816,16.74903l0,0c0,0.23007 0,0.46014 0,0.69021c0,0 0,0 0,0c0,0 0,0 0,0c0,0.04602 0,0.09202 0,0.13804c-0.04602,1.05831 -0.04602,2.11663 -0.04602,3.17495l0,0c0,10.99729 1.84055,21.58048 5.24557,31.42743c0.04602,0.18406 0.13804,0.41413 0.18406,0.64419c0.64419,2.16265 1.0123,4.41732 1.0123,6.76403l0,0c0,4.04921 -1.05831,7.82235 -2.85286,11.13534c-0.13804,0.27609 -0.23007,0.50615 -0.36811,0.69021c-2.11663,3.49705 -3.35901,7.59228 -3.35901,11.96359l0,0c0,12.74582 10.35311,23.09893 23.09893,23.09893l0,0c3.08292,0 5.9818,-0.59818 8.6506,-1.70251c0.27609,-0.09202 0.55216,-0.18406 0.92027,-0.27609c2.34671,-0.82825 4.92347,-1.28838 7.54626,-1.28838l0,0c3.58907,0 6.9941,0.82825 10.03101,2.30069c0.36811,0.13804 0.69021,0.27609 0.96629,0.41413c13.57407,7.27018 29.08073,11.36541 45.55367,11.36541l0,0c53.37602,0 96.629,-43.25298 96.629,-96.629l0,0c0,-16.24287 -4.0032,-31.56548 -11.08933,-45.00151c-1.84055,-3.22096 -2.94488,-7.04011 -2.94488,-11.13534l0.00001,0l0.00001,0.00002zm-10.03101,68.88268c0,33.08392 -26.78004,59.86397 -59.86397,59.86397l0,0c-33.08392,0 -59.86397,-26.78004 -59.86397,-59.86397l0,0c0,-33.08392 26.78004,-59.86397 59.86397,-59.86397l0,0c33.03792,0 59.86397,26.82605 59.86397,59.86397l0,0z"
+                                class="st4" />
+                        </g>
+                        <g id="Texte">
+                            <g id="arrondi">
+                                <g id="svg_49" class="st1">
+                                    <path id="svg_50"
+                                        d="m449.379,167.52835l0,114.31414l-81.36821,-82.65792l0.35174,78.55433l-14.89015,0l0,-114.31414l81.48547,83.83036l-0.35174,-79.72678l14.77291,0l-0.00001,0.00001l-0.00001,0z"
+                                        class="st7" />
+                                    <path id="svg_51"
+                                        d="m530.86446,247.72412l-42.32554,0l-11.72454,28.95958l-14.65566,0l48.1878,-114.78311l49.12576,114.78311l-17.1178,0l-11.49004,-28.95958l0.00001,0zm-5.04155,-12.89697l-15.71087,-40.21513l-16.2971,40.21513l32.00796,0l0.00001,0z"
+                                        class="st7" />
+                                    <path id="svg_52"
+                                        d="m627.5918,167.52835l0,14.18668l-29.5458,0l0,96.02387l-14.77291,0l0,-96.02387l-28.84234,0l0,-14.18668l73.16104,0l0.00001,0z"
+                                        class="st7" />
+                                    <path id="svg_53"
+                                        d="m659.717,251.8277c2.34491,3.86909 5.51053,7.03471 9.49687,9.26237c3.98634,2.34491 8.44166,3.40011 13.36596,3.40011c5.04155,0 9.73136,-1.17246 13.83494,-3.40011c4.10358,-2.22766 7.38645,-5.27603 9.73136,-9.26237c2.34491,-3.98634 3.51737,-8.44166 3.51737,-13.24872l0,-71.16788l14.53842,0l0,71.63685c0,7.85543 -1.87592,14.77291 -5.51053,20.75241c-3.6346,6.09675 -8.67616,10.66932 -14.89015,14.06943c-6.33125,3.28287 -13.36596,4.9243 -20.98691,4.9243c-7.62095,0 -14.53842,-1.64143 -20.86967,-4.9243c-6.33125,-3.28287 -11.25555,-7.97267 -14.89015,-14.06943c-3.6346,-6.09675 -5.39329,-13.01422 -5.39329,-20.75241l0,-71.63685l14.77291,0l0,71.16788c-0.2345,5.04155 0.93796,9.37962 3.28287,13.24872z"
+                                        class="st7" />
+                                    <path id="svg_54"
+                                        d="m806.62532,277.73891l-25.9112,-40.68411c-0.82072,0.11724 -1.99317,0.11724 -3.6346,0.11724l-16.2971,0l0,40.56686l-14.77291,0l0,-110.21055l29.42856,0c7.5037,0 14.18668,1.2897 20.16618,3.98634c5.86226,2.69664 10.55208,6.56574 13.83494,11.60728c3.40011,5.15879 5.04155,11.25555 5.04155,18.52475c0,6.80022 -1.52419,13.01422 -4.45533,18.75925c-3.04838,5.74502 -7.62095,9.96585 -13.83494,12.89697l27.78713,44.31872l-17.3523,0l0,0.11724l0.00001,0.00001l0,0.00001zm-12.77974,-61.08479c3.51737,-4.22083 5.27603,-8.91063 5.27603,-14.30392c0,-3.28287 -0.70347,-6.44849 -2.22766,-9.61412c-1.52419,-3.16562 -3.86909,-5.74502 -7.03471,-7.85543c-3.16562,-2.11042 -7.26921,-3.16562 -12.07626,-3.16562l-17.00056,0l0,41.15309l15.94535,0c7.97267,0 13.7177,-2.11042 17.1178,-6.214l0.00001,0z"
+                                        class="st7" />
+                                    <path id="svg_55"
+                                        d="m896.4352,247.72412l-42.32554,0l-11.72454,28.95958l-14.77291,0l48.1878,-114.78311l49.12576,114.78311l-17.1178,0l-11.37279,-28.95958l0.00001,0zm-5.04155,-12.89697l-15.71087,-40.21513l-16.2971,40.21513l32.00796,0l0.00001,0z"
+                                        class="st7" />
+                                    <path id="svg_56"
+                                        d="m951.42323,167.52835l0,95.90663l56.04323,0l0,14.30392l-70.81614,0l0,-110.21055l14.77291,0z"
+                                        class="st7" />
+                                    <path id="svg_57"
+                                        d="m1087.54497,175.61828c7.5037,6.80022 11.25555,15.94535 11.25555,27.66988c0,6.68299 -1.2897,13.01422 -3.86909,18.87649c-2.57939,5.86226 -6.80022,10.66932 -12.6625,14.42116c-5.86226,3.75184 -13.36596,5.62777 -22.62833,5.62777l-15.82811,0l0,35.52531l-22.15935,0l0,-112.20372l34.00113,0c13.7177,0 24.38701,3.40011 31.89071,10.08309l0,0.00001l-0.00001,0.00001zm-18.05576,42.32554c2.57939,-1.87592 4.33807,-4.10358 5.51053,-6.68299c1.17246,-2.57939 1.64143,-4.9243 1.64143,-7.26921c0,-3.98634 -1.17246,-7.85543 -3.51737,-11.49004c-2.34491,-3.75184 -6.80022,-5.51053 -13.60046,-5.51053l-15.82811,0l0,33.88388l15.71087,0c4.22083,-0.11724 7.62095,-1.0552 10.08309,-2.93113l0.00001,0.00001z"
+                                        class="st3" />
+                                    <path id="svg_58"
+                                        d="m1155.07825,255.81404l-37.16675,0l-9.14513,21.92487l-21.80763,0l51.23618,-118.06598l51.23618,118.06598l-25.55947,0l-8.79339,-21.92487l0.00001,0zm-7.38645,-18.642l-10.78655,-27.31815l-11.25555,27.31815l22.04211,0z"
+                                        class="st3" />
+                                    <path id="svg_59"
+                                        d="m1197.99002,165.53519l33.53214,0c14.30392,0 26.1457,2.81388 35.40807,8.32441c9.26237,5.51053 15.94535,12.6625 20.16618,21.45588c4.22083,8.79339 6.33125,18.17302 6.33125,28.25612c0,10.78655 -2.57939,20.28343 -7.62095,28.4906c-5.04155,8.20717 -11.95901,14.53842 -20.51792,18.99373c-8.55891,4.45533 -18.05576,6.68299 -28.25612,6.68299l-39.04267,0l0,-112.20372l0,0.00001l0.00001,-0.00001zm35.29083,90.86509c11.49004,0 20.51792,-2.93113 27.31815,-8.79339c6.68299,-5.86226 10.08309,-14.42116 10.08309,-25.44222c0,-8.91063 -1.87592,-16.0626 -5.51053,-21.33863c-3.75184,-5.27603 -7.97267,-8.91063 -13.01422,-11.02105c-4.9243,-1.99317 -9.61412,-3.04838 -13.95218,-3.04838l-17.93853,0l0,69.64369l13.01422,0l-0.00001,-0.00001z"
+                                        class="st3" />
+                                </g>
+                            </g>
+                            <g class="st1" id="Calque_11">
+                                <polygon id="svg_60"
+                                    points="358.39671111544885,168.46629922662396 353.47244940801465,163.42477396831964 353.47244940801465,168.93529132017284 "
+                                    class="st8" />
+                                <polygon id="svg_61"
+                                    points="447.2685700503207,279.61487889051205 449.49617380229756,281.8424826424889 449.49617380229756,279.61487889051205 "
+                                    class="st8" />
+                                <polygon id="svg_62"
+                                    points="508.47057867505646,166.70762545826437 510.4636863802589,161.9005962467345 511.7535233298986,165.0662152407749 "
+                                    class="st8" />
+                                <polygon id="svg_63"
+                                    points="873.9239877100772,166.70762545826437 875.917343855006,161.9005962467345 877.3241959157895,165.0662152407749 "
+                                    class="st8" />
+                                <polygon id="svg_64"
+                                    points="1136.2019311112672,164.48002170628752 1138.3121781474765,159.67289932986023 1139.6019529871846,162.83854937886645 "
+                                    class="st8" />
+                            </g>
+                        </g>
+                    </g>
+                </svg>
             </a>
-          </div>
-        </header>
-        
-      <!--corps-->
-      <main>
 
-        <!-- entête -->
-        <header>
-          <div class="container">
-              <div>
-                <h1>
-                  Jouez ! Bougez !
-                </h1>
-                <div class="my-3 lead">
-                  <p>L'activité physique adaptée en prévention ou en rééducation par les jeux vidéo.</p>
-                </div>
-              </div>
-          </div>
-        </header>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-
-      </main>
-        
-        <h1>MediMoov !!!!</h1>
-        <div id="maincontent">
-
+            <nav class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="https://www.medimoov.fr/" class="nav-link nav-home-link">
+                            <i class="fas fa-home"></i>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#temoignages" class="nav-link">témoignages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#science" class="nav-link">démarche scientifique</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://blog.naturalpad.fr" class="nav-link" title="Blog">BLOG</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <div id="form-message">
+    </header>
 
-        </div>
-            <div class="p-2 p-md-0 bg-light bg-md-white max-width">
-              <div class="contact-form-content">
-                <div class="row">
-                  <div class="col-12 mt-1">
-                    <input id="inputname" name="name" type="text" class="form-control" placeholder="Nom *">
-                  </div>
-                  <div class="col-12 mt-1">
-                    <input id="inputemail" name="email" type="email" class="form-control" placeholder="E-mail *">
-                  </div>
+    <main>
+        <!-- En-tête -->
+        <header class="section py-4 py-md-5 text-light">
+            <div class="bg-full bg-gradient-primary">
+                <div class="bg-cover bg-full bg-opacity"
+                    style="background-image:url(https://www.naturalpad.fr/assets/images/serious-game-jeu-sante.jpg);">
                 </div>
-                <textarea id="inputmessage" name="message" class="form-control mt-1" rows="8" placeholder="Message *"></textarea>
-                
-                <div class="text-right">
-                  <button class="btn btn-primary submit g-recaptcha" id="btn-submit-mmform">
-                    <span class="txt">Envoyer</span>
-                    <i class="fas fa-spinner spinner" style="display:none"></i>
-                  </button>
-                </div>
-                  <div class="small text-primary">
-                      * champs requis
-                  </div>
-              </div>
             </div>
-    </body>
-</html>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-11 col-md-10 col-lg-9">
+                        <h1 class="display-1 text-white">
+                            MediMoov : jeu vidéo et capture de mouvement pour l'activité physique
+                        </h1>
+                        <div class="my-3 lead">
+                            <p>En rééducation ou en prévention, en établissement senior ou handicap</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- En-tête -->
 
-<script src="postform.js">
-</script>
+        <section class="container section nmt-md-4 bg-white text-center text-primary">
+            <div class="row pt-3">
+                <div class="col col-6 col-sm-3">
+                    <span class="display-2 counter">8393</span>
+                    Joueurs
+                </div>
+                <div class="col col-6 col-sm-3">
+                    <span class="display-2 counter">112</span>
+                    Etablissements clients
+                </div>
+                <div class="col col-6 col-sm-3 mt-3 mt-sm-0">
+                    <span class="display-2 counter">15</span>
+                    Projets de recherche
+                </div>
+                <div class="col col-6 col-sm-3 mt-3 mt-sm-0">
+                    <span class="display-2 counter">7</span>
+                    Etudes cliniques
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="bg-gradient-primary text-white py-4 shift-y" id="story">
+                <div class="container">
+                    <div class="row">
+                        <!--Ajout d'une vidéo YT-->
+                        <style>
+                            .video-container {
+                                position: relative;
+                                padding-bottom: 56.25%;
+                                /* ratio 16/9 */
+                                height: 0;
+                                overflow: hidden;
+                                clear: both;
+                            }
+
+                            .video-container iframe,
+                            .video-container object,
+                            .video-container embed {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        </style>
+                        <div class="video-container">
+                            <iframe align="center" width="560" height="315"
+                                src="https://www.youtube.com/watch?v=Dzgp_oGotyE"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="container text-lg-center pt-4">
+                    <div class="row timeline">
+                        <div class="col-12 col-lg-3">
+                            <span class="bg-white text-primary rounded-circle">
+                                2011
+                            </span>
+                            <div class="ml">
+                                <h4>Les premiers jeux mouvement</h4>
+                                <p>Constatant que de nombreux établissements de santé développent la wii-thérapie, nous
+                                    développons notre premier jeu basé sur le mouvement.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 mt-3 mt-lg-0 clearfix">
+                            <span class="bg-white text-primary rounded-circle">
+                                2013
+                            </span>
+                            <div class="ml">
+                                <h4>Création de NaturalPad</h4>
+                                <p>Fort d'un excellent accueil du premier prototype dans des CHU, NaturalPad est
+                                    officiellement créée et lance ses premières études cliniques.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 mt-3 mt-lg-0 clearfix">
+                            <span class="bg-white text-primary rounded-circle">
+                                2016
+                            </span>
+                            <div class="ml">
+                                <h4>Commercialisation de MediMoov</h4>
+                                <p>MediMoov, la première plateforme de jeux thérapeutiques basés sur le mouvement pour
+                                    la rééducation s'installe chez ses premiers clients.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 mt-3 mt-lg-0 clearfix">
+                            <span class="bg-white text-primary rounded-circle">
+                                2021
+                            </span>
+                            <div class="ml">
+                                <h4>MediMoov : 112 établissements !</h4>
+                                <p>Aujourd'hui, ce sont plus d'une centaine d'établissements sanitaires et
+                                    médico-sociaux (EHPAD, SSR, IEM, IME, FAM, MAS...) qui nous font confiance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>
