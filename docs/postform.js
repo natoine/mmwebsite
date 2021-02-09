@@ -32,6 +32,7 @@ document.getElementById("btn-submit-mmform").addEventListener('click', function(
         function(response){
             response.text().then(function(data){
                 let responsebody = document.createElement("div");
+                responsebody.classList.add("validmessage");
                 responsebody.appendChild(document.createTextNode("votre message a bien été envoyé"));
                 document.getElementById("msgform").innerHTML = "";
                 document.getElementById("msgform").appendChild(responsebody);
@@ -47,6 +48,7 @@ document.getElementById("btn-submit-mmform").addEventListener('click', function(
     {
       document.getElementById("msgform").innerHTML = "";
       let formverification = document.createElement("div");
+      formverification.classList.add("notvalidmessage");
       if(!name) 
       {
         formverification.appendChild(document.createTextNode("Veuillez remplir le champ Nom. "));
