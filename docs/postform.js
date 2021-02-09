@@ -9,7 +9,8 @@ else url = "https://mmserveur.herokuapp.com".concat(postroute)
 
 console.log("url", url);
 
-document.getElementById("btn-submit-mmform").onclick = function() {
+document.getElementById("btn-submit-mmform").addEventListener('click', function(e) {
+  e.preventDefault();
     let name = document.getElementById("inputname").value ;
     let email = document.getElementById("inputemail").value ;
     let msg = document.getElementById("inputmessage").value ;
@@ -17,6 +18,7 @@ document.getElementById("btn-submit-mmform").onclick = function() {
     let main = document.getElementById("form-message");
     if(name && email && msg)
     {
+      console.log("not null");
       document.getElementById("btn-submit-mmform").disabled = true;
       fetch(url, {    method:'POST', 
                       body: JSON.stringify({
@@ -31,8 +33,8 @@ document.getElementById("btn-submit-mmform").onclick = function() {
             response.text().then(function(data){
                 let responsebody = document.createElement("div");
                 responsebody.appendChild(document.createTextNode(data));
-                main.innerHTML = "";
-                main.appendChild(responsebody);
+                document.getElementById("msgform").innerHTML = "";
+                document.getElementById("msgform").appendChild(responsebody);
                 document.getElementById("btn-submit-mmform").disabled = false;
             })
         }
@@ -40,6 +42,7 @@ document.getElementById("btn-submit-mmform").onclick = function() {
     }
     else 
     {
+      document.getElementById("msgform").innerHTML = "";
       let formverification = document.createElement("div");
       if(!name) 
       {
@@ -60,4 +63,4 @@ document.getElementById("btn-submit-mmform").onclick = function() {
       }
       document.getElementById("msgform").appendChild(formverification);
     }
-   }
+   });
