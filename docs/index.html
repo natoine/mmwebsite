@@ -24,9 +24,10 @@
     <link rel="stylesheet" href="https://www.naturalpad.fr/assets/css/app.min.css?v=1597313722">
     <link rel="stylesheet" href="https://www.naturalpad.fr/assets/css/custom.css" />
     <link rel="icon" type="image/png" href="https://www.naturalpad.fr/assets/images/faviconMM.png" />
+    <title>MediMoov</title>
 </head>
 
-<body>
+<body class="">
     <header class="navbar navbar-expand-md navbar-light h6 mb-0" id="top">
         <div class="container">
 
@@ -372,11 +373,11 @@
 
                         </div>
                     </div>
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center text-center">
 
                         <div class="max-width col-12 col-md-4 mt-4 d-flex flex-column">
                             <div class="h-100 project bg-white text-rnd d-flex flex-column justify-content-between">
-                                <i class="fas fa-dna display-1 mb-2 text-tertiary" aria-hidden="true"></i>
+                                <i class="fas fa-dna display-1 mb-2 text-tertiary mt-2" aria-hidden="true"></i>
                                 <h3 class="text-tertiary font-weight-normal"><span class="font-weight-bold">Conception participative</span></h3>
                                 <p class="text-dark">Nos jeux sont développés en co-conception avec nos utilisateurs pour répondre à vos besoins. On vous appelle pour récupérer vos retours régulièrement.</p>
                             </div>
@@ -384,7 +385,7 @@
                         <div class="max-width col-12 col-md-4 mt-4 text-secondary d-flex flex-column">
                             <div class="h-100 project bg-white text-rnd d-flex flex-column justify-content-between">
 
-                                <i class="fas fa-flask display-1 mb-2" aria-hidden="true"></i>
+                                <i class="fas fa-flask display-1 mb-2 mt-2" aria-hidden="true"></i>
                                 <h3 class="text-secondary font-weight-normal">Culture de <span
                                         class="font-weight-bold">Recherche</span></h3>
                                 <p class="text-dark">MediMoov est le résultat de nombreux projets de recherche et fait l'objet de publications régulières en santé et en technologie.</p>
@@ -392,10 +393,10 @@
                         </div>
                         <div class="max-width col-12 col-md-4 mt-4 d-flex flex-column">
                             <div class="h-100 project bg-white text-rnd d-flex flex-column justify-content-between">
-                                <i class="fas fa-gamepad display-1 mb-2 text-primary" aria-hidden="true"></i>
+                                <i class="fas fa-gamepad display-1 mb-2 text-primary mt-2" aria-hidden="true"></i>
                                 <h3 class="text-primary font-weight-normal">Une équipe <span
                                         class="font-weight-bold">de&nbsp;joueurs</span></h3>
-                                <p class="text-dark">Passionés de jeux vidéo, nous proposons des mécaniques de jeu permettant d'intensifier l'engagement des joueurs dans leur activité physique.</p>
+                                <p class="text-dark">Passionnés de jeux vidéo, nous proposons des mécaniques de jeu permettant d'intensifier l'engagement des joueurs dans leur activité physique.</p>
                             </div>
                         </div>
                     </div>
@@ -490,8 +491,16 @@
 
 </html>
 
-<scipt>
-    
-</scipt>
+<script src="https://kit.fontawesome.com/a110b5b764.js"></script>
+<script>
+    window.addEventListener('scroll', function(e) {
+        console.log("scroll", document.scrollTop);
+        if (window.scrollTop == 0) {
+            document.body.classList.remove("scrolled");
+        }
+        else document.body.classList.add("scrolled");
+    });
+
+</script>
 <script src="postform.js">
 </script>
