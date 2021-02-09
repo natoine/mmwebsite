@@ -32,9 +32,12 @@ document.getElementById("btn-submit-mmform").addEventListener('click', function(
         function(response){
             response.text().then(function(data){
                 let responsebody = document.createElement("div");
-                responsebody.appendChild(document.createTextNode(data));
+                responsebody.appendChild(document.createTextNode("votre message a bien été envoyé"));
                 document.getElementById("msgform").innerHTML = "";
                 document.getElementById("msgform").appendChild(responsebody);
+                document.getElementById("inputname").value = "";
+                document.getElementById("inputemail").value = "";
+                document.getElementById("inputmessage").value = "";
                 document.getElementById("btn-submit-mmform").disabled = false;
             })
         }
