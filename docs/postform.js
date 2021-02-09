@@ -40,25 +40,24 @@ document.getElementById("btn-submit-mmform").onclick = function() {
     }
     else 
     {
-      main.innerHTML = "";
       let formverification = document.createElement("div");
       if(!name) 
       {
-        formverification.appendChild(document.createTextNode("please specify name. "));
+        formverification.appendChild(document.createTextNode("Veuillez remplir le champ Nom. "));
       }
       if(!msg)
       {
-        formverification.appendChild(document.createTextNode("please specify message. "));
+        formverification.appendChild(document.createTextNode("Veuillez remplir le champ Message. "));
       }
       if(!email)
       {
-        formverification.appendChild(document.createTextNode("please specify email. "));
+        formverification.appendChild(document.createTextNode("Veuillez remplir le champ E-mail. "));
       }
       else
       {
         const re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-        if(!re.test(String(email).toLowerCase())) formverification.appendChild(document.createTextNode("not valid email. "));
+        if(!re.test(String(email).toLowerCase())) formverification.appendChild(document.createTextNode("Cet E-mail n'est pas valide. "));
       }
-      main.appendChild(formverification);
+      document.getElementById("msgform").appendChild(formverification);
     }
    }

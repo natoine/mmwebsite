@@ -145,7 +145,7 @@
                         <a href="#science" class="nav-link">Démarche scientifique</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#devis" class="nav-link">Nous contacter</a>
+                        <a href="#contact" class="nav-link">Nous contacter</a>
                     </li>
                     <li class="nav-item">
                         <a href="https://blog.naturalpad.fr" class="nav-link" title="Blog">BLOG</a>
@@ -352,8 +352,85 @@
                 </div>
             </div>
         </section>
+        <section id="contact">
+            <div class="container nmt-3">
+                <div class="container bg-white shadow-lg">
+        
+                  <div class="row pt-3 mx-sm-2">
+        
+                    <div class="col-12 col-sm-11 col-md-10 col-lg-9">
+                      <h4 class="overheading">Contact</h4>
+                      <h3 class="display-3 mb-2">Vous souhaitez en savoir plus sur&nbsp;MediMoov&nbsp;? Contactez‑nous&nbsp;!</h3>
+                    </div>
+        
+                  </div>
+        
+                  <div class="row mx-sm-2 mt-2 pb-3 justify-content-center">
+        
+                    <div class="col-12 col-lg-4 order-2 order-lg-1 max-width text-white">
+                      <div class="clearfix mt-3 mt-lg-1 py-2 px-2 px-xl-3 bg-gradient-primary big-border-top">
+                          <i class="fas fa-map-marker-alt float-left icon text-white" aria-hidden="true"></i> 
+                        <address class="d-block ml-2 mb-0">
+                          <strong class="h5 text-white">NaturalPad</strong><br>
+                          70 ancien chemin de Saint-Vincent<br>
+                          34730 Prades-Le-Lez
+                        </address>
+                      
+                        <div class="mt-3">
+                          <i class="fas fa-mobile-alt float-left icon text-white" aria-hidden="true"></i>
+                          <a href="tel:+33434432682" class="d-block ml-2 h5 mb-0 text-white">09 72 65 18 84</a>
+                        </div>
+                      
+                      </div>
+                    </div>
+        
+                    <div id="msgform"></div>
+                    <form class="col-12 col-lg-8 order-1 order-lg-2 max-width">
+                      <div class="p-2 p-md-0 bg-light bg-md-white max-width">
+                        <div class="contact-form-content">
+                          <div class="row">
+                            <div class="col-12 mt-1">
+                              <input id="inputname" name="name" type="text" class="form-control" placeholder="Nom *">
+                            </div>
+                            <div class="col-12 mt-1">
+                              <input id="inputemail" name="email" type="text" class="form-control" placeholder="E-mail *">
+                            </div>
+                          </div>
+                          <textarea id="inputmessage" name="message" class="form-control mt-1" rows="8" placeholder="Message *"></textarea>
+                          <div class="mt-1 small px-1">
+                                  Ce site est protégé par reCAPTCHA, la
+                                  <a href="https://policies.google.com/privacy">politique de confidentialité</a>
+                                  et
+                                  <a href="https://policies.google.com/terms">les conditions d'utilisation</a>
+                                  de Google s'appliquent.
+                          </div>
+                          <div class="text-right">
+                            <input type="hidden" name="action" value="contact-form">
+                            <div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; position: fixed; visibility: hidden; display: block; transition: right 0.3s ease 0s; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LfOxgAVAAAAAGRdoRHfvK7VWnLx2c3jdV0strD1&amp;co=aHR0cHM6Ly93d3cubmF0dXJhbHBhZC5mcjo0NDM.&amp;hl=fr&amp;v=2Mfykwl2mlvyQZQ3PEgoH710&amp;size=invisible&amp;sa=submit&amp;cb=8m6zkf2kkx4v" width="256" height="60" role="presentation" name="a-dpfv8kbaq2xc" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+                            <button id="btn-submit-mmform" class="btn btn-primary submit g-recaptcha" data-sitekey="6LfOxgAVAAAAAGRdoRHfvK7VWnLx2c3jdV0strD1" data-callback="onRecaptchaSubmit" data-action="submit">
+                              <span class="txt">Envoyer</span>
+                              <i class="fas fa-spinner spinner" style="display:none" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                            <div class="small text-primary">
+                                * champs requis
+                            </div>
+                        </div>
+                      </div>
+                    </form>
+        
+                  </div>
+        
+                </div>
+              </div>
+    
 
+        </section>
+        
     </main>
 </body>
 
 </html>
+
+<script src="postform.js">
+</script>
