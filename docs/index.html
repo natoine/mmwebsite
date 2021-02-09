@@ -501,8 +501,7 @@
 <script src="https://kit.fontawesome.com/a110b5b764.js"></script>
 <script>
     window.addEventListener('scroll', function (e) {
-        console.log("scroll", document.scrollTop);
-        if (window.scrollTop == 0) {
+        if (window.scrollY == 0) {
             document.body.classList.remove("scrolled");
         }
         else document.body.classList.add("scrolled");
