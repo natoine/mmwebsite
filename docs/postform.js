@@ -1,5 +1,4 @@
 var domain = document.location.href;
-console.log("domain", domain);
 
 var postroute = "/medimoovform" ;
 
@@ -7,19 +6,17 @@ var url ;
 if(domain == "http://localhost:3000/") url = postroute ;
 else url = "https://mmserveur.herokuapp.com".concat(postroute)
 
-console.log("url", url);
-
 document.getElementById("btn-submit-mmform").addEventListener('click', function(e) {
   e.preventDefault();
     let name = document.getElementById("inputname").value ;
     let email = document.getElementById("inputemail").value ;
     let msg = document.getElementById("inputmessage").value ;
-    console.log(`name: ${name} email: ${email} msg:${msg}`);
     let main = document.getElementById("form-message");
     if(name && email && msg)
     {
-      console.log("not null");
       document.getElementById("btn-submit-mmform").disabled = true;
+      if(document.getElementById("wantdemo").checked) msg = "Je veux une démo" + "\n" + msg ;
+      if(document.getElementById("wantinvoice").checked) msg = "Je veux un devis" + "\n" + msg ;
       fetch(url, {    method:'POST', 
                       body: JSON.stringify({
                           email: email,
@@ -51,15 +48,15 @@ document.getElementById("btn-submit-mmform").addEventListener('click', function(
       formverification.classList.add("notvalidmessage");
       if(!name) 
       {
-        formverification.appendChild(document.createTextNode("Veuillez remplir le champ Nom. "));
+        formverification.appendChild(document.createTextNode("Dites nous qui vous êtes avec le champ Nom. "));
       }
       if(!msg)
       {
-        formverification.appendChild(document.createTextNode("Veuillez remplir le champ Message. "));
+        formverification.appendChild(document.createTextNode("Dites nous en plus sur vous avec le champ Message. "));
       }
       if(!email)
       {
-        formverification.appendChild(document.createTextNode("Veuillez remplir le champ E-mail. "));
+        formverification.appendChild(document.createTextNode("Pensez à remplir le champ E-mail que l'on puisse vous contacter. "));
       }
       else
       {
