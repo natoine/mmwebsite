@@ -517,6 +517,13 @@
         else document.body.classList.add("scrolled");
     });
 
+    var btnnav = document.getElementsByClassName("navbar-toggler")[0];
+    var burgermenu = document.getElementById("navbarSupportedContent");
+    btnnav.addEventListener('click',function (e){
+        if(burgermenu.classList.contains("show")) burgermenu.classList.remove("show");
+        else burgermenu.classList.add("show");
+    });
+
 </script>
 <script src="postform.js">
 </script>
