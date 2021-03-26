@@ -29,9 +29,10 @@
 
 <body class="">
     <header class="navbar navbar-expand-md navbar-light h6 mb-0" id="top">
-        <div class="container">
+        <div class="container" style="align-items:flex-start;" id="navbar-container">
 
-            <a class="navbar-brand" href="https://www.medimoov.fr/#top"><svg version="1.1" id="logoMediMoov"
+            <a class="navbar-brand" href="https://www.medimoov.fr/#top">
+                <svg version="1.1" id="logoMediMoov"
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 1300 360" xml:space="preserve" alt="NaturalPad" width="3900" height="1080"
                     style="width:360px;height:auto;">
@@ -454,10 +455,13 @@
         logo.setAttribute("style","width:180px;height:auto;");
         parent.firstChild.remove();
         parent.innerHTML = colorlogo;
+
+        container = document.getElementById("navbar-container");
+        container.removeAttribute("style");
     }
 
     window.addEventListener('scroll', function (e) {    
-        if (window.scrollY == 0) {
+        if (window.scrollY == 0 & !mobile) {
             document.body.classList.remove("scrolled");
             while (parent.firstChild) {
                 parent.firstChild.remove()
