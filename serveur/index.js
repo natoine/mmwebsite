@@ -5,7 +5,7 @@ var app = express();
 var cors = require('cors')
 
 var corsOptions = {
-  origin: 'https://natoine.github.io',
+  origin: ['https://natoine.github.io','https://www.medimoov.com','https://www.naturalpad.fr'],
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
